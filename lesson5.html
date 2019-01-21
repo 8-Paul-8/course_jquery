@@ -8,7 +8,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
+    <h1>Welcome to my Site</h1>
+
     <script>
+        $(document).ready(function(){
+            $("h1").css("color", "red")
+            .slideUp(2000)
+            .slideDown(2000, function(){
+                $(this).css("color", "blue");
+            });
+            
+        });
+
         /*
             ---jQuery Method Chaining
             Until now we have been writing jQuery statements one at a time (one after the other).
