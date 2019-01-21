@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,41 @@
     <title>Lesson 6</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
+
 <body>
+    <h1 id="test">Welcome to my site</h1>
+    <h2><a id="myAnchor" href="http://www.example.com">Example.com</a></h2>
+    <p id="myParagraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi reiciendis dolorum perferendis assumenda libero odio cum, aliquam labore vitae voluptatum velit explicabo magnam mollitia corporis asperiores itaque quasi excepturi ullam!</p>
+    <input id="myInput" type="text" value="This is text">
+    <hr>
+    <button id="btn1">Click Me 1</button>
+    <button id="btn2">Click Me 2</button>
+    <button id="btn3">Click Me 3</button>
+    <button id="btn4">Click Me 4</button>
     <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                //alert("HTML: " + $("#test").html());
+                if($("#test").html() === "Welcome to my site"){
+                    $("#test").text("Hello world!");
+                } else {
+                    $("#test").text("Welcome to my site");
+                }
+            });
+
+            $("#btn2").click(function () {
+                alert($("#myAnchor").attr("href"));
+            });
+
+            $("#btn3").click(function () {
+                alert($("#myInput").val());
+            });
+
+            $("#btn4").click(function () {
+                $("#myInput").val("My new text");
+            });
+        });
+
         /*
             ---jQuery DOM Manipulation
             
@@ -73,4 +107,5 @@
         */
     </script>
 </body>
+
 </html>
