@@ -13,14 +13,17 @@
     <h1>jQuery Syntax</h1>
     <h2>This is a heading</h2>
 
-    <p>This is a paragraph.</p>
+    <p id="p1">This is a paragraph.</p>
     <p>This is another paragraph.</p>
+    <div>"Hello World"</div>
+
+    <a href="http://www.ote.gr" target="_blank">OTE</a>
 
     <button>Click me to hide paragraphs</button>
     <script>
         // $(document).ready(function(){
         //    $(selector).action()
-        // }
+        // });
         //
         // Examples for selectors:
         // $(this).hide() - hides the current element.
@@ -35,8 +38,11 @@
         // The initial method with "$(document).ready(function()" is easier to understand
         $(document).ready(function () {
             $("button").click(function () {
-                $("p").hide();
+                $("#p1").hide();
+                $(this).hide();
+                $("a[target='_blank']").hide();
             });
+
         });
         // Test .class selector, #id selector
         /*

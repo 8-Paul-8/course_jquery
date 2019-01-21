@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,14 @@
     <title>Lesson 2</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
+
 <body>
+
+    <h1>Hello World</h1>
+    <h3 style="display: inline">My name is Nikos</h3>
+
     <script>
-    /*
+        /*
         Mouse Events	Keyboard Events	    Form Events	    Document/Window Events
         ---------------------------------------------------------------------------
         click	        keypress	        submit	        load
@@ -48,7 +54,32 @@
                     $(this).css("background-color", "yellow");
                 } 
         });
-    */    
+    */
+   
+
+    $(document).ready(function(){
+        let cnt = 0;
+        $("h1").click(function () {
+            const myArray = ["blue", "red", "black"];
+            //alert("Mouse up over h1!");
+            $(this).css("background-color", myArray[cnt]);
+            ++cnt;
+            if(cnt == 3){
+                cnt = 0;
+            }
+        });
+
+        
+        $("h3").hover(function(){
+                alert("You entered h3!");
+            },
+            function(){
+                alert("Bye! You now leave h3!");
+        });
+
+    });
+
     </script>
 </body>
+
 </html>
