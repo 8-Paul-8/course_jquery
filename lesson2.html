@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 2</title>
+</head>
+<body>
+    <script>
+    /*
+        Mouse Events	Keyboard Events	    Form Events	    Document/Window Events
+        ---------------------------------------------------------------------------
+        click	        keypress	        submit	        load
+        dblclick	    keydown	            change	        resize
+        mouseenter	    keyup	            focus	        scroll
+        mouseleave	 	                    blur	        unload
+
+        $("#p1").click(function(){
+            alert("Mouse up over p1!");
+            $(this).css("background-color", "#cccccc");
+        });
+
+        The hover() method takes two functions and is 
+        a combination of the mouseenter() and mouseleave() 
+        methods. The first function is executed when the 
+        mouse enters the HTML element, and the second 
+        function is executed when the mouse leaves the 
+        HTML element:
+        $("#p1").hover(function(){
+            alert("You entered p1!");
+            },
+            function(){
+            alert("Bye! You now leave p1!");
+        });
+
+        The on() method attaches one or more event handlers 
+        for the selected elements.
+        $("p").on({
+                mouseenter: function(){
+                    $(this).css("background-color", "lightgray");
+                }, 
+                mouseleave: function(){
+                    $(this).css("background-color", "lightblue");
+                }, 
+                click: function(){
+                    $(this).css("background-color", "yellow");
+                } 
+        });
+    */    
+    </script>
+</body>
+</html>

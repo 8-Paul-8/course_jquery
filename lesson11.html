@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 11</title>
+</head>
+<body>
+    <script>
+        /*
+            ---jQuery Traversing the DOM
+
+            ---Parent
+            $(document).ready(function(){
+                $("span").parent();
+            });
+            $(document).ready(function(){
+                $("span").parents();
+            });
+            $(document).ready(function(){
+                $("span").parents("ul");
+            });
+            $(document).ready(function(){
+                $("span").parentsUntil("div");
+            });
+
+            ---Descendant
+            $(document).ready(function(){
+                $("div").children();
+            });
+
+            $(document).ready(function(){
+                $("div").children("p.first");
+            });
+
+            $(document).ready(function(){
+                $("div").find("span");
+            });
+
+            $(document).ready(function(){
+                $("div").find("*");
+            });
+
+            ---Siblings
+            $(document).ready(function(){
+                $("h2").siblings();
+            });
+
+            $(document).ready(function(){
+                $("h2").siblings("p");
+            });
+
+            $(document).ready(function(){
+                $("h2").next();
+            });
+
+            $(document).ready(function(){
+                $("h2").nextAll();
+            });
+
+            $(document).ready(function(){
+                $("h2").nextUntil("h6");
+            });
+
+            The prev(), prevAll() and prevUntil() methods work 
+            just like the methods above but with reverse functionality: they return previous sibling elements (traverse backwards along sibling elements in the DOM tree, instead of forward).
+        
+            ---The first(), last(), eq(), filter() and not() Methods
+            $(document).ready(function(){
+                $("div").first();
+            });
+
+            $(document).ready(function(){
+                $("div").last();
+            });
+
+            The eq() method returns an element with a specific index number of the selected elements.
+            The index numbers start at 0, so the first element will have the index number 0 and not 1. The following example selects the second <p> element (index number 1):
+            $(document).ready(function(){
+                $("p").eq(1);
+            });
+        
+            $(document).ready(function(){
+                $("p").filter(".intro");
+            });
+
+            $(document).ready(function(){
+                $("p").not(".intro");
+            });
+
+        */
+    </script>
+</body>
+</html>

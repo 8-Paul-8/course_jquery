@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 12</title>
+</head>
+<body>
+    <script>
+        /*
+            ---jQuery AJAX
+            AJAX = Asynchronous JavaScript and XML.
+            In short; AJAX is about loading data in the background and display it on the webpage, without reloading the whole page.
+            Examples of applications using AJAX: Gmail, Google Maps, Youtube, and Facebook tabs.
+            Without jQuery, AJAX coding can be a bit tricky!
+            Writing regular AJAX code can be a bit tricky, because different browsers have different syntax for AJAX implementation. This means that you will have to write extra code to test for different browsers. However, the jQuery team has taken care of this for us, so that we can write AJAX functionality with only one single line of code.
+
+            $(selector).load(URL,data,callback);
+
+            $("#div1").load("demo_test.txt");
+            $("#div1").load("demo_test.txt #p1");
+
+            $("button").click(function(){
+                $("#div1").load("demo_test.txt", function(responseTxt, statusTxt, xhr){
+                    if(statusTxt == "success")
+                    alert("External content loaded successfully!");
+                    if(statusTxt == "error")
+                    alert("Error: " + xhr.status + ": " + xhr.statusText);
+                });
+            });
+
+            The jQuery get() and post() methods are used to request data from the server with an HTTP GET or POST request.
+
+            HTTP Request: GET vs. POST
+            Two commonly used methods for a request-response between a client and server are: GET and POST.
+            GET - Requests data from a specified resource
+            POST - Submits data to be processed to a specified resource
+            GET is basically used for just getting (retrieving) some data from the server. Note: The GET method may return cached data.
+            POST can also be used to get some data from the server. However, the POST method NEVER caches data, and is often used to send data along with the request.
+
+            $.get(URL,callback);
+
+            $("button").click(function(){
+                $.get("demo_test.jsp", function(data, status){
+                    alert("Data: " + data + "\nStatus: " + status);
+                });
+            });
+            In demo_test.jsp:
+            <%
+                response.write("This is some text from an external ASP file.")
+            %>
+
+            $.post(URL,data,callback);
+            $("button").click(function(){
+                $.post("demo_test_post.jsp",
+                {
+                    name: "Donald Duck",
+                    city: "Duckburg"
+                },
+                function(data, status){
+                    alert("Data: " + data + "\nStatus: " + status);
+                });
+            });
+            In demo_test_post.js:
+            <%
+                String fname = null;
+                String city = null;
+                fname=request.getParameter("name");
+                city=request.getParameter("city");
+                out.print("Dear " + fname + ". ");
+                out.print("Hope you live well in " + city + ".");
+            %>
+        */    
+    </script>
+</body>
+</html>

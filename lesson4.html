@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 4</title>
+    <style>
+        #panel,
+        #flip {
+            padding: 5px;
+            font-size: 18px;
+            text-align: center;
+            background-color: #555;
+            color: white;
+            border: solid 1px #666;
+            border-radius: 3px;
+        }
+
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+    <div id="flip">Click to slide down panel</div>
+    <div id="panel">Hello world!</div>
+    <script>
+        /*
+            ---$(selector).animate({params},speed,callback);
+            $("button").click(function(){
+                $("div").animate({
+                    left: '250px'
+                });
+            });
+
+            $("button").click(function(){
+                $("div").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+            });
+
+            Is it possible to manipulate ALL CSS properties with the animate() method?
+            Yes, almost! However, there is one important thing to remember: all property names must be camel-cased when used with the animate() method: You will need to write paddingLeft instead of padding-left, marginRight instead of margin-right, and so on. 
+
+            Also, color animation is not included in the core jQuery library.
+            If you want to animate color, you need to download the Color Animations plugin from jQuery.com.
+
+            $("button").click(function(){
+                $("div").animate({
+                    left: '250px',
+                    height: '+=150px',
+                    width: '+=150px'
+                });
+            });
+
+            $("button").click(function(){
+                $("div").animate({
+                    height: 'toggle'
+                });
+            }); 
+
+            $("button").click(function(){
+                var div = $("div");
+                div.animate({height: '300px', opacity: '0.4'}, "slow");
+                div.animate({width: '300px', opacity: '0.8'}, "slow");
+                div.animate({height: '100px', opacity: '0.4'}, "slow");
+                div.animate({width: '100px', opacity: '0.8'}, "slow");
+            });
+
+            $("button").click(function(){
+                var div = $("div");
+                div.animate({left: '100px'}, "slow");
+                div.animate({fontSize: '3em'}, "slow");
+            }); 
+
+            ---$(selector).stop(stopAll,goToEnd);
+            $(document).ready(function(){
+                $("#flip").click(function(){
+                    $("#panel").slideDown(5000);
+                });
+                $("#stop").click(function(){
+                    $("#panel").stop();
+                });
+            });
+
+            --Callback functions
+            A callback function is a function that is passed as an argument
+            JavaScript statements are executed line by line. However, with effects, the next line of code can be run even though the effect is not finished. This can create errors.
+            To prevent this, you can create a callback function.
+            A callback function is executed after the current effect is finished.
+            Typical syntax: $(selector).hide(speed,callback);
+            
+            $("button").click(function(){
+                $("p").hide("slow", function(){
+                    alert("The paragraph is now hidden");
+                });
+            });
+            Compare above code with:
+            $("button").click(function(){
+                $("p").hide(1000);
+                alert("The paragraph is now hidden");
+            });
+
+        */
+    </script>
+</body>
+
+</html>
