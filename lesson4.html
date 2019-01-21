@@ -28,9 +28,19 @@
 
 <body>
     <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
-    <div id="flip">Click to slide down panel</div>
+    <div id="flip">Click to ....</div>
     <div id="panel">Hello world!</div>
+
     <script>
+        $(document).ready(function(){
+            $("#flip").click(function(){
+                $("div").animate({
+                     left: '250px',
+                     top: '300px'
+                });
+            });
+        });
+        
         /*
             ---$(selector).animate({params},speed,callback);
             $("button").click(function(){
